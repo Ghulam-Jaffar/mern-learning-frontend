@@ -1,0 +1,14 @@
+
+.todo {
+  position: relative;
+  color: #404040
+}
+
+#todo-title {
+  cursor: pointer
+}
+
+.complete {
+  text-decoration: line-through;
+  color: green
+}
