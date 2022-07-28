@@ -54,15 +54,18 @@ function TodoComponent() {
                         </svg>
                         {/* <span class=' text-green-600 text-2xl ml-3 cursor-pointer' onClick={addTodo}>+</span> */}
                     </div>
-                    <div class='px-6 py-2 pb- text-xl'>
+                    <div class='px-6 py-2 pb-2 text-xl'>
                         {!todos || !todos.length ?
                             <div class='flex justify-center items-center'>No Todos</div> :
-                            todos.map(todo => (
-                                <div key={todo._id} class='flex justify-center items-center' >
-                                    <p onClick={() => todoClick(todo._id)} class={todo.complete ? 'break-all decoration-green-600 line-through  w-11/12' : 'break-all  w-11/12'} id='todo-title'>{todo.title}</p>
+                            todos.map((todo, index) => (
+                                <div key={todo._id} class='flex justify-center items-center border-b-2 border-opacity-10 border-sky-500 my-3' >
+                                    <p onClick={() => todoClick(todo._id)} class={todo.complete ? 'break-all decoration-green-600 line-through  w-11/12' : 'break-all  w-11/12'} id='todo-title'>{`${index + 1}. ${todo.title}`}</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-600 cursor-pointer" viewBox="0 0 20 20" fill="currentColor" onClick={() => { deleteTodo(todo._id) }}>
-                                        <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                                        <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
                                     </svg>
+                                    {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-600 cursor-pointer" viewBox="0 0 20 20" fill="currentColor" onClick={() => { deleteTodo(todo._id) }}>
+                                        <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                                    </svg> */}
                                     {/* <p class=' text-4xl text-red-600 cursor-pointer' onClick={() => { deleteTodo(todo._id) }}> -</p> */}
                                 </div>
                             ))}
