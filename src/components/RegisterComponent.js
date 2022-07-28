@@ -19,10 +19,10 @@ function RegisterComponent() {
                 Register
             </h1>
 
-            <hr class='w-1/5 mx-auto' />
+            <hr class='w-2/12 mx-auto' />
 
             <div class=' grid grid-cols-1 justify-items-center mt-6 '>
-                <div class='flex-col justify-center items-center w-2/12 max-w-4xl min-w-fit'>
+                <div class='flex-col justify-center items-center w-8/12 max-w-2xl sm:w-8/12 md:w-5/12 lg:w-2/12 xl:9/12'>
                     <div class='rounded-xl shadow-lg w-full border border-sky-100 p-3 px-2 py-3 pt-3 flex flex-col justify-center items-center'>
                         <input class='form-control block w-full px-3 my-1 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out duration-500 focus:text-gray-700 focus:bg-white focus:border-sky-600 focus:outline-none' value={name} onChange={(e) => { setName(e.target.value) }} placeholder='Enter Name' />
                         <input class='form-control block w-full px-3 my-1 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out duration-500 focus:text-gray-700 focus:bg-white focus:border-sky-600 focus:outline-none' value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder='Enter Email' />
@@ -30,7 +30,7 @@ function RegisterComponent() {
                         <button class='px-2 py-1 mt-3  text-lg bg-sky-500 rounded-lg text-white' onClick={handleSubmit}> Register </button>
                     </div>
 
-                    <Link to="/login" class='flex justify-end mt-3 text-sm'>
+                    <Link to="/" class='flex justify-end mt-3 text-sm'>
                         <p>Already Registered?</p>
                     </Link>
                 </div>
