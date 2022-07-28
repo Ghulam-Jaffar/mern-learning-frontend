@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../App.modules.css';
 
-const BASE_URL = 'http://localhost:5000/api' || 'https://mern-learning-backend.herokuapp.com/api';
+const BASE_URL = 'api/';
 function TodoComponent() {
     const [todos, setTodos] = useState(null);
     const [newTodo, setNewTodo] = useState('');
